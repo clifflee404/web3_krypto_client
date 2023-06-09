@@ -22,7 +22,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 )
 
 const Welcome = () => {
-  const { connectWallet, currentAccount, sendTransaction, formData, handleChange } = useContext(TransactionContext)
+  const { currentAccount, connectWallet,handleChange, sendTransaction, formData, isLoading } = useContext(TransactionContext)
 
   const handleSubmit = (e) => {
     const { addressTo, amount, keyword, message } = formData
@@ -33,9 +33,6 @@ const Welcome = () => {
 
     sendTransaction();
   }
-
-  // test
-  const isLoading = false;
 
   return (
     <div className="flex w-full justify-center items-center">
