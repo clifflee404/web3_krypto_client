@@ -5,12 +5,12 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
-    
+    fontFamily: {
+      display: ["Open Sans", "sans-serif"],
+      body: ["Open Sans", "sans-serif"],
+    },
     extend: {
-      fontFamily: {
-        display: ["Open Sans", "sans-serif"],
-        body: ["Open Sans", "sans-serif"],
-      },
+     
       screens: {
         mf: "990px",
       },
