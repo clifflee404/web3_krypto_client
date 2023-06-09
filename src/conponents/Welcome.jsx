@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import { AiFillPlayCircle } from "react-icons/ai"
 import { SiEthereum } from "react-icons/si"
 import { BsInfoCircle } from "react-icons/bs"
+import { TransactionContext } from "../context/TransactionContext"
 
 import { shortenAddress } from "../utils/shortenAddress"
 import { Loader } from "."
@@ -21,6 +22,8 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 )
 
 const Welcome = () => {
+  const { connectWallet, currentAccount, sendTransaction, formData, handleChange } = useContext(TransactionContext)
+
   const handleSubmit = (e) => {
     const { addressTo, amount, keyword, message } = formData
 
@@ -28,17 +31,11 @@ const Welcome = () => {
 
     if (!addressTo || !amount || !keyword || !message) return
 
-    // sendTransaction();
+    sendTransaction();
   }
 
   // test
-  const currentAccount = '0x8e1B03Aa9469B39bA0bBCDe01B2161903626B977'
   const isLoading = false;
-  const connectWallet = () => {
-    console.log('connect wallet');
-  }
-
-  const handleChange =() => {}
 
   return (
     <div className="flex w-full justify-center items-center">
