@@ -42,8 +42,7 @@ const Welcome = () => {
             Send Crypto <br /> across the world
           </h1>
           <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-            Explore the crypto world. Buy and sell cryptocurrencies easily on
-            Krypto.
+          Explore the crypto world. buy and sell crypto coins easily, trusted cryptoon to be your crypto market partner
           </p>
           {!currentAccount && (
             <button

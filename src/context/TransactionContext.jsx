@@ -49,7 +49,7 @@ export const TransactionProvider = ({ children }) => {
 
         const availableTransactions =
           await transactionsContract.getAllTransactions()
-
+        console.log('---availableTransactions:',availableTransactions);
         const structuredTransactions = availableTransactions.map(
           (transaction) => ({
             addressTo: transaction.receiver,
@@ -88,7 +88,7 @@ export const TransactionProvider = ({ children }) => {
         console.log("No accounts found")
       }
 
-      console.log(accounts)
+      // console.log(accounts)
     } catch (error) {
       console.log(error)
     }
