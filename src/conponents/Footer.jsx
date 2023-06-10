@@ -12,7 +12,7 @@ const Footer = () => (
       </div>
       <div className="flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full">
         {footerNavList.map(item => (
-          <p className="text-white text-base text-center mx-2 cursor-pointer">{item}</p>
+          <p key={item} className="text-white text-base text-center mx-2 cursor-pointer">{item}</p>
         ))}
       </div>
     </div>
